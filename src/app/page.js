@@ -1,57 +1,79 @@
 import CardProject from "@/components/CardProject";
 import ContactForm from "@/components/ContactForm";
-import Description from "@/components/Description";
 import Intro from "@/components/Intro";
-import Nebulosa from "@/components/Spline";
 import Image from "next/image";
 
-function Home() {
+export default function Home() {
   return (
-    <div className="absolute flex-col bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500">
+    <main className="bg-gradient-to-tr from-yellow-300 via-orange-400 to-red-400 min-h-screen text-gray-900">
       <Intro />
 
-      <div className={`flex flex-wrap h-screen m-20 text-left text-2xl justify-center items-center`}>
-
-        <Image src="/images/profile-photo.jpg" alt="yo" width={200} height={200}
-          style={
-            { borderRadius: "5%" }
-          } />
-        <div className="w-3/4">
-          <h1 className="m-4">
-            Soy un ingeniero de sistemas con experiencia en el desarrollo web y móvil multiplataforma. <br/>Tambien poseo una habilidad para la optimización de procesos y la implementación de soluciones tecnológicas eficientes que mejoran la productividad y la experiencia del usuario.
-          </h1>
+      {/* Sobre mí */}
+      <section className="flex flex-col md:flex-row items-center justify-center gap-10 px-8 py-20 max-w-6xl mx-auto">
+        {/* <Image
+          src="/images/profile-photo.jpg"
+          alt="Cristian Machado"
+          width={200}
+          height={200}
+          className="rounded-xl shadow-lg"
+        /> */}
+        <div className="text-lg md:text-xl font-light leading-relaxed max-w-xl">
+          <h2 className="text-3xl font-bold mb-4">Sobre mí</h2>
+          <p>
+            Soy un ingeniero de sistemas con experiencia en desarrollo web y
+            móvil multiplataforma. Me especializo en la optimización de procesos
+            e implementación de soluciones tecnológicas eficientes que mejoran
+            la productividad y la experiencia del usuario.
+          </p>
         </div>
+      </section>
 
-      </div>
-
-      <div className="flex flex-col h-screen justify-center items-center">
-        <h1 className="text-4xl">Mi experiencia con...</h1>
-        <div className="flex flex-wrap items-start justify-center">
-          <CardProject image={"/images/eventmatch.jpg"} title={"EventMatch"} description={"Una app"}/>
-          <CardProject image={"/images/bullybuster.jpg"} title={"Bullybuster"} description={"Un juego"}/>
-          <CardProject image={"/images/cole.jpg"} title={"Web Colegio San Pedro"} description={"Una web de un colegio"}/>
-
-          <CardProject image={"/images/lota.png"} title={"Plataforma Lota"} description={"Una plataforma para la gestion de campos deportivos"}/>
-          <CardProject image={"/images/investigo.jpg"} title={"App InvestiGo"} description={"App con IA para mejorar las habilidades de investigacion"}/>
+      {/* Proyectos */}
+      <section className="py-20 bg-white text-black">
+        <h2 className="text-4xl font-bold text-center mb-12">Mis Proyectos</h2>
+        <div className="flex flex-wrap justify-center gap-8 px-4 max-w-7xl mx-auto">
+          <CardProject
+            image="/images/eventmatch.jpg"
+            title="EventMatch"
+            description="App social para crear y unirse a eventos según intereses comunes."
+          />
+          <CardProject
+            image="/images/bullybuster.jpg"
+            title="BullyBuster"
+            description="Videojuego educativo para concientizar sobre el bullying."
+          />
+          <CardProject
+            image="/images/cole.jpg"
+            title="Web Colegio San Pedro"
+            description="Sitio web institucional para una institución educativa rural."
+          />
+          <CardProject
+            image="/images/lota.png"
+            title="Plataforma Lota"
+            description="Gestión de reservas de canchas deportivas con verificación de pagos."
+          />
+          <CardProject
+            image="/images/investigo.jpg"
+            title="InvestiGo"
+            description="App con IA que guía el desarrollo de tesis y artículos académicos."
+          />
         </div>
-      </div>
+      </section>
 
-      {/* frase */}
-      <div className="flex h-screen justify-center items-center text-xl sm:text-2xl md:text-3xl lg:text-4xl observe">
-        "El mejor proceso es el que no existe"
-      </div>
-      {/* estoy trabajando en... */}
+      {/* Frase motivadora */}
+      <section className="py-32 text-center text-white text-2xl md:text-4xl font-semibold bg-black bg-opacity-50">
+        “El mejor proceso es el que no existe”
+      </section>
 
-      {/* trabajos */}
-      <div className="flex flex-col h-screen justify-center items-center observe">
-        <h1 className="text-center text-4xl font-bold">
-          What if we change the world?
-        </h1>
-        <ContactForm />
-      </div>
-    </div>
-
+      {/* Contacto */}
+      <section className="py-20 bg-white text-black">
+        <h2 className="text-4xl font-bold text-center mb-10">
+          ¿Y si cambiamos el mundo juntos?
+        </h2>
+        <div className="max-w-3xl mx-auto px-4">
+          <ContactForm />
+        </div>
+      </section>
+    </main>
   );
 }
-
-export default Home;

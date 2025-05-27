@@ -1,39 +1,49 @@
 "use client";
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Intro() {
   const tags = [
-    "Full-Stack dev",
-    "Especialista en optimizacion de procesos",
-    "System Engineering"
+    "Full-Stack Developer",
+    "Especialista en optimización de procesos",
+    "Ingeniero de Sistemas",
   ];
 
   const [index, setIndex] = useState(0);
 
-  const changeIndex = () =>{
-    const isLastIndex = index === tags.length - 1;
-    const newIndex = isLastIndex ? 0 : index + 1;
-    setIndex(newIndex);
-  };
-
   useEffect(() => {
-    const interval = setInterval(changeIndex, 2600);
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % tags.length);
+    }, 3000);
     return () => clearInterval(interval);
-  }, [index]);
+  }, []);
 
   return (
-    <div className='observer flex flex-col h-screen justify-center items-center'>
-      <h1 className="text-center text-6xl font-bold"> Hello, I´m  <br /> Cristian Machado</h1>
-      <div className="flex flex-row items-center m-6">
-        <h2 className='text-2xl font-bold'>Just a </h2>
-        <div className='mx-2 px-2 py-1 border-blue-500 border rounded-lg text-2xl font-bold'>
-          {
-            tags[index]
-          }
+    <section className="observer flex flex-col h-screen justify-center items-center text-center px-4">
+      <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+        Hello, I’m <br />
+        <span className="text-orange-500">Cristian Machado</span>
+      </h1>
+
+      <div className="mt-6 flex items-center gap-2 text-xl md:text-2xl font-medium">
+        <span>Just a</span>
+        <div className="min-w-[200px] px-3 py-1 bg-blue-100 border border-blue-400 rounded-full text-blue-700">
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={tags[index]}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.5 }}
+              className="block"
+            >
+              {tags[index]}
+            </motion.span>
+          </AnimatePresence>
         </div>
       </div>
-    </div>
-  )
+    </section>
+  );
 }
 
-export default Intro
+export default Intro;
