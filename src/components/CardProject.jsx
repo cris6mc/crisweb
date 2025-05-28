@@ -1,8 +1,9 @@
 import Image from "next/image";
 
-function CardProject({ image, title, description }) {
+function CardProject({ image, title, description, url }) {
   return (
-    <div className="w-72 bg-white rounded-2xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl p-4">
+    <a href={url} target="_blank" rel="noopener noreferrer">
+        <div className="w-72 bg-white rounded-2xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl p-4">
       <div className="w-full h-44 relative mb-4">
         <Image
           src={image}
@@ -14,6 +15,8 @@ function CardProject({ image, title, description }) {
       <h3 className="text-xl font-semibold text-gray-800 mb-2">{title}</h3>
       <p className="text-sm text-gray-600">{description}</p>
     </div>
+    </a>
+    
   );
 }
 

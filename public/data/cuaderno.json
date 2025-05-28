@@ -1,0 +1,51 @@
+[
+  {
+    "semana": "Semana 1",
+    "temas": "Definiciones básicas, introducción a HTML y CSS.",
+    "ejercicios": "Formulario de contacto, página personal con CSS.",
+    "reflexion": "Aprendí las bases del diseño web. Practiqué haciendo una landing page.",
+    "repositorio": "https://github.com/Joshee0210/practica"
+  },
+  {
+    "semana": "Semana 2",
+    "temas": "JavaScript básico, manipulación del DOM.",
+    "ejercicios": "Calculadora básica, manipulaciones de elementos HTML.",
+    "reflexion": "Comprendí mejor cómo interactuar con elementos usando JS.",
+    "repositorio": "https://github.com/DonMichi26/PraCalificada"
+  },
+  {
+    "semana": "Semana 3",
+    "temas": "Introducción a React, componentes y props.",
+    "ejercicios": "Crear una aplicación simple con componentes reutilizables.",
+    "reflexion": "Me familiaricé con la estructura de React y su forma de trabajar.",
+    "repositorio": "https://github.com/Joshee0210/practica"
+  },
+  {
+    "semana": "Semana 4",
+    "temas": "Estado y ciclo de vida en React.",
+    "ejercicios": "Aplicación que maneja estado y eventos.",
+    "reflexion": "Entendí cómo manejar el estado en aplicaciones React.",
+    "repositorio": "https://github.com/DonMichi26/PraCalificada"
+  },
+  {
+    "semana": "Semana 5",
+    "temas": "Rutas y navegación en React.",
+    "ejercicios": "Implementar navegación entre diferentes vistas.",
+    "reflexion": "Aprendí a manejar rutas y cómo navegar entre componentes.",
+    "repositorio": "https://github.com/DonMichi26/PraCalificada"
+  },
+  {
+    "semana": "Semana 6",
+    "temas": "Introducción a Redux, manejo de estado global.",
+    "ejercicios": "Aplicación que utiliza Redux para manejar el estado.",
+    "reflexion": "Comprendí la importancia de Redux en aplicaciones grandes.",
+    "repositorio": "https://github.com/Joshee0210/practica"
+  },
+  {
+    "semana": "Semana 7",
+    "temas": "Integración de APIs, consumo de datos externos.",
+    "ejercicios": "Aplicación que consume una API pública.",
+    "reflexion": "Aprendí a trabajar con datos externos y cómo integrarlos en mi aplicación.",
+    "repositorio": "https://github.com/DonMichi26/PraCalificada"
+  }
+]
