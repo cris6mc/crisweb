@@ -1,51 +1,196 @@
 [
   {
-    "semana": "Semana 1",
-    "temas": "Definiciones básicas, introducción a HTML y CSS.",
-    "ejercicios": "Formulario de contacto, página personal con CSS.",
-    "reflexion": "Aprendí las bases del diseño web. Practiqué haciendo una landing page.",
-    "repositorio": "https://github.com/Joshee0210/practica"
+    "semana": 1,
+    "titulo": "Introducción y Fundamentos de Tecnologías Web",
+    "descripcion": "Presentación del sílabo, prueba de diagnóstico, fundamentos de tecnologías web, roles y uso de Visual Studio Code.",
+    "temas": [
+      "Sistemas web, aplicaciones web, páginas web",
+      "DNS, TCP/IP, HTTP",
+      "Roles: frontend, backend, fullstack",
+      "Laboratorio: Visual Studio Code"
+    ],
+    "codigo": "<!DOCTYPE html>\n<html>\n<head><title>Semana 1</title></head>\n<body><h1>Hola Mundo</h1></body>\n</html>",
+    "reflexion": "Comprender la base es vital para construir aplicaciones robustas.",
+    "bibliografias": ["Media Active (2014)", "Manual de la asignatura"]
   },
   {
-    "semana": "Semana 2",
-    "temas": "JavaScript básico, manipulación del DOM.",
-    "ejercicios": "Calculadora básica, manipulaciones de elementos HTML.",
-    "reflexion": "Comprendí mejor cómo interactuar con elementos usando JS.",
-    "repositorio": "https://github.com/DonMichi26/PraCalificada"
+    "semana": 2,
+    "titulo": "HTML5, XML y Diseño CSS3",
+    "descripcion": "Estructura HTML y XML. Principales etiquetas, árbol DOM, SEO y diseño responsivo con CSS3.",
+    "temas": [
+      "HTML5 y XML",
+      "Árbol DOM",
+      "Flexbox y Grid Layout",
+      "Compatibilidad de navegadores"
+    ],
+    "codigo": "<div class=\"container\">\n  <h1>Hola Mundo CSS</h1>\n</div>",
+    "reflexion": "El diseño responsivo amplía el alcance de nuestras aplicaciones.",
+    "bibliografias": ["Media Active (2014)"]
   },
   {
-    "semana": "Semana 3",
-    "temas": "Introducción a React, componentes y props.",
-    "ejercicios": "Crear una aplicación simple con componentes reutilizables.",
-    "reflexion": "Me familiaricé con la estructura de React y su forma de trabajar.",
-    "repositorio": "https://github.com/Joshee0210/practica"
+    "semana": 3,
+    "titulo": "Bootstrap y Tailwind CSS",
+    "descripcion": "Uso de librerías CSS para componentes, tipografía, layouts y UI con Bootstrap y Tailwind.",
+    "temas": [
+      "Layout y Components con Bootstrap",
+      "Tailwind: Tipografía, UI Elements",
+      "Flex básico, containers"
+    ],
+    "codigo": "<button class=\"btn btn-primary\">Bootstrap</button>\n<button class=\"bg-blue-500 text-white px-4 py-2 rounded\">Tailwind</button>",
+    "reflexion": "Los frameworks CSS mejoran productividad y consistencia visual.",
+    "bibliografias": ["Frank Zickert (2020)"]
   },
   {
-    "semana": "Semana 4",
-    "temas": "Estado y ciclo de vida en React.",
-    "ejercicios": "Aplicación que maneja estado y eventos.",
-    "reflexion": "Entendí cómo manejar el estado en aplicaciones React.",
-    "repositorio": "https://github.com/DonMichi26/PraCalificada"
+    "semana": 4,
+    "titulo": "Javascript y Typescript",
+    "descripcion": "Sintaxis básica, tipos de datos, estructuras, funciones, manejo de DOM y Canvas.",
+    "temas": [
+      "Variables y operadores",
+      "Funciones, closures",
+      "DOM y Canvas"
+    ],
+    "codigo": "const saludo = nombre => `Hola ${nombre}`;\nconsole.log(saludo(\"Cristian\"));",
+    "reflexion": "Dominar JS/TS permite crear interfaces dinámicas y potentes.",
+    "bibliografias": ["Media Active (2014)"]
   },
   {
-    "semana": "Semana 5",
-    "temas": "Rutas y navegación en React.",
-    "ejercicios": "Implementar navegación entre diferentes vistas.",
-    "reflexion": "Aprendí a manejar rutas y cómo navegar entre componentes.",
-    "repositorio": "https://github.com/DonMichi26/PraCalificada"
+    "semana": 5,
+    "titulo": "Framework JS y Estructura SPA",
+    "descripcion": "Introducción a frameworks frontend, renderizado del lado cliente y componentes con props y children.",
+    "temas": [
+      "JSX",
+      "Props, children",
+      "Estilos CSS en frameworks"
+    ],
+    "codigo": "export default function Hola({ nombre }) {\n  return <h1>Hola {nombre}</h1>;\n}",
+    "reflexion": "El enfoque basado en componentes mejora el mantenimiento del código.",
+    "bibliografias": ["Frank Zickert (2020)"]
   },
   {
-    "semana": "Semana 6",
-    "temas": "Introducción a Redux, manejo de estado global.",
-    "ejercicios": "Aplicación que utiliza Redux para manejar el estado.",
-    "reflexion": "Comprendí la importancia de Redux en aplicaciones grandes.",
-    "repositorio": "https://github.com/Joshee0210/practica"
+    "semana": 6,
+    "titulo": "Eventos, Condicionales y Consumo de APIs",
+    "descripcion": "Eventos, renderizado condicional, consumo de APIs usando Promesas y Async/Await.",
+    "temas": [
+      "Eventos",
+      "Routing",
+      "Axios y Fetch"
+    ],
+    "codigo": "fetch('https://api.example.com')\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "reflexion": "Integrar APIs amplía la funcionalidad de nuestras aplicaciones.",
+    "bibliografias": ["Frank Zickert (2020)"]
   },
   {
-    "semana": "Semana 7",
-    "temas": "Integración de APIs, consumo de datos externos.",
-    "ejercicios": "Aplicación que consume una API pública.",
-    "reflexion": "Aprendí a trabajar con datos externos y cómo integrarlos en mi aplicación.",
-    "repositorio": "https://github.com/DonMichi26/PraCalificada"
+    "semana": 7,
+    "titulo": "Hooks en Framework JS",
+    "descripcion": "Uso de Hooks básicos y personalizados: useState, useEffect, useContext, useReducer.",
+    "temas": [
+      "Hooks básicos",
+      "Hooks personalizados"
+    ],
+    "codigo": "const [count, setCount] = useState(0);",
+    "reflexion": "Los Hooks optimizan la lógica y el estado en componentes.",
+    "bibliografias": ["Frank Zickert (2020)"]
+  },
+  {
+    "semana": 8,
+    "titulo": "Revisión y Retroalimentación",
+    "descripcion": "Revisión de evaluación de logro y retroalimentación de la Unidad I.",
+    "temas": [
+      "Revisión de evaluaciones",
+      "Retroalimentación individual y grupal"
+    ],
+    "codigo": "// Sin código técnico esta semana.",
+    "reflexion": "La retroalimentación fortalece nuestro aprendizaje continuo.",
+    "bibliografias": ["Manual de la asignatura"]
+  },
+  {
+    "semana": 9,
+    "titulo": "Arquitectura Web Backend",
+    "descripcion": "Fundamentos de arquitectura backend, servidores web y primeros pasos con PHP y JSP.",
+    "temas": [
+      "Arquitectura server-side",
+      "PHP",
+      "JSP"
+    ],
+    "codigo": "<?php echo 'Hola desde PHP'; ?>",
+    "reflexion": "El backend es clave para la lógica de negocio y seguridad.",
+    "bibliografias": ["Pressman & Maxim (2015)"]
+  },
+  {
+    "semana": 10,
+    "titulo": "Introducción a Python",
+    "descripcion": "Sintaxis básica, estructuras de control, funciones, clases y módulos en Python.",
+    "temas": [
+      "Sintaxis Python",
+      "Funciones imperativas",
+      "Clases y herencia"
+    ],
+    "codigo": "def saludar(nombre):\n  return f\"Hola {nombre}\"\nprint(saludar(\"Cristian\"))",
+    "reflexion": "Python es versátil para prototipos y backend escalable.",
+    "bibliografias": ["Pressman & Maxim (2015)"]
+  },
+  {
+    "semana": 11,
+    "titulo": "Introducción a Django",
+    "descripcion": "Patrones MVC/MTV, estructura de proyectos, vistas, URLs y plantillas en Django.",
+    "temas": [
+      "MVC y MTV",
+      "Gestión de vistas y URLs",
+      "Uso de plantillas"
+    ],
+    "codigo": "from django.http import HttpResponse\n\ndef saludo(request):\n  return HttpResponse(\"Hola Django\")",
+    "reflexion": "Django acelera el desarrollo de aplicaciones web robustas.",
+    "bibliografias": ["Frank Zickert (2020)"]
+  },
+  {
+    "semana": 12,
+    "titulo": "Formularios, Django Admin y Middleware",
+    "descripcion": "Creación y validación de formularios, personalización de admin, manejo de sesiones y middleware.",
+    "temas": [
+      "Formularios Django",
+      "Admin personalizado",
+      "Middleware y sesiones"
+    ],
+    "codigo": "from django import forms\n\nclass ContactForm(forms.Form):\n  name = forms.CharField(max_length=100)",
+    "reflexion": "Gestionar datos seguros y personalizados es esencial.",
+    "bibliografias": ["Frank Zickert (2020)"]
+  },
+  {
+    "semana": 13,
+    "titulo": "Diseño de APIs RESTful",
+    "descripcion": "Principios REST, serialización, filtrado, ruteo y manejo de CSRF y CORS.",
+    "temas": [
+      "REST y HATEOAS",
+      "Serialización",
+      "AJAX y CSRF"
+    ],
+    "codigo": "from rest_framework import serializers\n\nclass UserSerializer(serializers.ModelSerializer):\n  class Meta:\n    model = User\n    fields = '__all__'",
+    "reflexion": "APIs bien diseñadas conectan eficientemente sistemas.",
+    "bibliografias": ["Roldán Martinez (2018)"]
+  },
+  {
+    "semana": 14,
+    "titulo": "Microservicios en Django",
+    "descripcion": "Fundamentos de microservicios, bases de datos, Docker y Kubernetes.",
+    "temas": [
+      "Arquitectura de microservicios",
+      "Docker y Kubernetes",
+      "Comunicación entre microservicios"
+    ],
+    "codigo": "# Dockerfile\nFROM python:3.10\nWORKDIR /app\nCOPY . .\nRUN pip install -r requirements.txt\nCMD [\"python\", \"manage.py\", \"runserver\"]",
+    "reflexion": "Los microservicios permiten escalar de forma modular.",
+    "bibliografias": ["Roldán Martinez (2018)"]
+  },
+  {
+    "semana": 15,
+    "titulo": "Presentación de Proyecto Final",
+    "descripcion": "Exposición de proyectos de investigación y RSU. Evaluación de logro final.",
+    "temas": [
+      "Exposición de proyecto",
+      "Evaluación final"
+    ],
+    "codigo": "// Sin código técnico esta semana.",
+    "reflexion": "La culminación de un proyecto muestra el dominio de la materia.",
+    "bibliografias": ["Manual de la asignatura"]
   }
 ]

@@ -2,32 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 🎨 Colores base para modo claro */
 :root {
-  --foreground-rgb:  255, 255, 255;
-  --background-start-rgb: 50, 50, 50;
-  --background-end-rgb: 0, 0, 0;
+  --foreground-rgb: 34, 34, 34;   /* Texto más oscuro, mejor legibilidad */
+  --background-start-rgb: 245, 245, 245; /* Fondo claro */
+  --background-end-rgb: 235, 235, 235;   /* Degradado sutil */
 }
 
+/* 🎨 Colores para modo oscuro */
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
+    --foreground-rgb: 240, 240, 240; /* Texto más suave, no blanco puro */
+    --background-start-rgb: 18, 18, 18;  /* Fondo más realista, no negro puro */
     --background-end-rgb: 0, 0, 0;
   }
 }
 
+/* 🎨 Fondo degradado vertical sutil + color texto dinámico */
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
-      transparent,
+      rgb(var(--background-start-rgb)),
       rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  );
+  font-family: 'Inter', sans-serif; /* Opcional: tipografía limpia */
 }
 
+/* 🪄 Ejemplo de suavizado global */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ✅ Utilidad personalizada para balancear títulos largos */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+/* ⚡️ Opcional: estilos de enlace */
+a {
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Opcional: mejor aspecto para pre/code en claro */
+pre {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  pre {
+    background: rgba(255, 255, 255, 0.05);
   }
 }
