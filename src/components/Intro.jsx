@@ -2,13 +2,13 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-function Intro() {
-  const tags = [
-    "Full-Stack Developer",
-    "Especialista en optimización de procesos",
-    "Ingeniero de Sistemas",
-  ];
+const tags = [
+  "Full-Stack Developer",
+  "Especialista en optimización de procesos",
+  "Ingeniero de Sistemas",
+];
 
+function Intro() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ function Intro() {
       setIndex((prev) => (prev + 1) % tags.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, []); // ✅ ahora sin warning
 
   return (
     <section className="observer flex flex-col h-screen justify-center items-center text-center px-4">

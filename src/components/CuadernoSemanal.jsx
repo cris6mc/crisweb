@@ -23,18 +23,17 @@ const CuadernoSemanal = () => {
       <div className="max-w-6xl mx-auto grid gap-10">
         {semanas.map((semana) => (
           <Link
-              href={`/cuaderno/${semana.semana}`}
-              className=""
-            >
-              <div key={semana.semana} className="bg-orange-500 border p-6 rounded-lg shadow-md">
-            <h3 className="text-2xl font-bold text-blue-600 mb-2">
-              Semana {semana.semana}: {semana.titulo}
-            </h3>
-            <p className="mb-4">{semana.descripcion}</p>
-            
-          </div>
-            </Link>
-          
+            key={semana.semana} // ✅ Aquí debe ir la key
+            href={`/cuaderno/${semana.semana}`}
+            className=""
+          >
+            <div className="bg-orange-500 border p-6 rounded-lg shadow-md">
+              <h3 className="text-2xl font-bold text-blue-600 mb-2">
+                Semana {semana.semana}: {semana.titulo}
+              </h3>
+              <p className="mb-4">{semana.descripcion}</p>
+            </div>
+          </Link>
         ))}
       </div>
     </section>
