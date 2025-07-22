@@ -25,17 +25,20 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    // Aquí puedes integrar tu lógica de envío real, como emailjs, API, etc.
+    // Aquí tu lógica real de envío: emailjs, API, etc.
   };
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white rounded-2xl shadow-xl p-8 space-y-6 max-w-3xl mx-auto"
+      className="backdrop-blur-2xl bg-white/5 border border-cyan-400/20 shadow-[0_20px_50px_rgba(0,255,255,0.1)] p-8 space-y-6 rounded-2xl max-w-3xl mx-auto"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="flex flex-col">
-          <label htmlFor="nombre" className="text-sm font-medium text-gray-700 mb-1">
+          <label
+            htmlFor="nombre"
+            className="text-sm font-medium text-cyan-200 mb-1"
+          >
             Tu Nombre
           </label>
           <input
@@ -46,11 +49,14 @@ const ContactForm = () => {
             value={formData.nombre}
             onChange={handleChange}
             required
-            className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-gray-800"
+            className="p-3 border border-cyan-400/20 bg-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 text-cyan-100 placeholder-cyan-400"
           />
         </div>
         <div className="flex flex-col">
-          <label htmlFor="email" className="text-sm font-medium text-gray-700 mb-1">
+          <label
+            htmlFor="email"
+            className="text-sm font-medium text-cyan-200 mb-1"
+          >
             Tu Email
           </label>
           <input
@@ -61,13 +67,16 @@ const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-gray-800"
+            className="p-3 border border-cyan-400/20 bg-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 text-cyan-100 placeholder-cyan-400"
           />
         </div>
       </div>
 
       <div className="flex flex-col">
-        <label htmlFor="mensaje" className="text-sm font-medium text-gray-700 mb-1">
+        <label
+          htmlFor="mensaje"
+          className="text-sm font-medium text-cyan-200 mb-1"
+        >
           Tu Mensaje
         </label>
         <textarea
@@ -78,27 +87,48 @@ const ContactForm = () => {
           onChange={handleChange}
           rows={5}
           required
-          className="p-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-orange-400 text-gray-800"
+          className="p-3 border border-cyan-400/20 bg-white/10 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-cyan-400 text-cyan-100 placeholder-cyan-400"
         />
       </div>
 
       <div className="flex flex-col md:flex-row justify-between items-center mt-6 gap-4">
         <button
           type="submit"
-          className="bg-orange-500 hover:bg-orange-600 transition text-white font-semibold py-3 px-6 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-orange-300"
+          className="bg-cyan-500 hover:bg-cyan-600 transition text-white font-semibold py-3 px-6 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-cyan-300"
         >
           ¡Contáctame!
         </button>
 
-        <div className="flex space-x-4 text-gray-600">
-          <a href="https://www.instagram.com/cristian_mc6/" target="_blank" rel="noopener noreferrer">
-            <FaInstagram size={28} className="hover:text-orange-500 transition" />
+        <div className="flex space-x-4 text-cyan-300">
+          <a
+            href="https://www.instagram.com/cristian_mc6/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram
+              size={28}
+              className="hover:text-cyan-400 transition hover:drop-shadow-[0_0_10px_rgba(0,255,255,0.6)]"
+            />
           </a>
-          <a href="https://github.com/cris6mc" target="_blank" rel="noopener noreferrer">
-            <FaGithub size={28} className="hover:text-orange-500 transition" />
+          <a
+            href="https://github.com/cris6mc"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub
+              size={28}
+              className="hover:text-cyan-400 transition hover:drop-shadow-[0_0_10px_rgba(0,255,255,0.6)]"
+            />
           </a>
-          <a href="https://www.linkedin.com/in/cristian-machado-contreras/" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin size={28} className="hover:text-orange-500 transition" />
+          <a
+            href="https://www.linkedin.com/in/cristian-machado-contreras/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin
+              size={28}
+              className="hover:text-cyan-400 transition hover:drop-shadow-[0_0_10px_rgba(0,255,255,0.6)]"
+            />
           </a>
         </div>
       </div>

@@ -13,16 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="relative group">
-          <div className="absolute z-10 bottom-8 right-8">
-            <button>botonnn</button>
-          </div>
-          <div className="relative z-0">
+      <body >
+          <div className="bg-gradient-to-tr from-[#0f172a] via-[#0a192f] to-[#0f172a] text-cyan-100 ">
             {children}
           </div>
-          
-        </div>
           
       </body>
     </html>
