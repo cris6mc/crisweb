@@ -1,4 +1,7 @@
+export const runtime = "nodejs";
 import { notFound } from "next/navigation";
+import { promises as fs } from "fs";
+import path from "path";
 
 export default async function SemanaDetalle({ params }) {
   const { id } = params;
