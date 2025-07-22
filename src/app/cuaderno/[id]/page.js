@@ -3,10 +3,10 @@ import { notFound } from "next/navigation";
 export default async function SemanaDetalle({ params }) {
   const { id } = params;
 
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/data/cuaderno.json`
-  );
-  const data = await res.json();
+  const filePath = path.join(process.cwd(), "public", "data", "cuaderno.json");
+  const fileContents = await fs.readFile(filePath, "utf8");
+  const data = JSON.parse(fileContents);
+
   const semana = data.find((s) => s.semana === Number(id));
 
   if (!semana) {
