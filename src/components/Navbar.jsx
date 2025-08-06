@@ -5,8 +5,6 @@ const sections = [
   { id: "portada", label: "Inicio" },
   { id: "sobre-mi", label: "Sobre mí" },
   { id: "proyectos", label: "Proyectos" },
-  { id: "cuaderno", label: "Cuaderno" },
-  { id: "reflexion-final", label: "Reflexión Final" },
   { id: "contacto", label: "Contacto" },
 ];
 

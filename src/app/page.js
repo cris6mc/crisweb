@@ -1,9 +1,7 @@
 import CardProject from "@/components/CardProject";
 import ContactForm from "@/components/ContactForm";
-import CuadernoSemanal from "@/components/CuadernoSemanal";
 import Intro from "@/components/Intro";
 import Navbar from "@/components/Navbar";
-import ReflexionFinal from "@/components/ReflexionFinal";
 
 export default function Home() {
   return (
@@ -76,26 +74,6 @@ export default function Home() {
 
         {/* Figura decorativa */}
         <div className="absolute -bottom-20 -right-20 w-[300px] h-[300px] bg-blue-500/10 backdrop-blur-lg -rotate-12 rounded-xl border border-blue-400/20 shadow-[0_0_80px_10px_rgba(0,0,255,0.05)]" />
-      </section>
-
-      {/* CUADERNO DE SEMANAS */}
-      <section
-        id="cuaderno"
-        className="relative py-20 px-6 max-w-5xl mx-auto space-y-16"
-      >
-        <div className="backdrop-blur-2xl bg-white/5 border border-cyan-400/20 shadow-[0_20px_50px_rgba(0,255,255,0.1)] rounded-2xl p-10 md:p-16">
-          <CuadernoSemanal />
-        </div>
-      </section>
-
-      {/* REFLEXIÓN FINAL */}
-      <section
-        id="reflexion-final"
-        className="relative py-20 px-6 max-w-5xl mx-auto"
-      >
-        <div className="backdrop-blur-2xl bg-white/5 border border-cyan-400/20 shadow-[0_20px_50px_rgba(0,255,255,0.1)] rounded-2xl p-10 md:p-16">
-          <ReflexionFinal />
-        </div>
       </section>
 
       {/* FRASE MOTIVADORA */}
